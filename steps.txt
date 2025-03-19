@@ -1,0 +1,3 @@
+step1:npm -v
+step2:npm init -y
+step3:npm i express

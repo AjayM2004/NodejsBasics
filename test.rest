@@ -1,0 +1,18 @@
+### TEST GET/ WEBSITE
+GET http://localhost:7117/
+### TEST GET/DASHBOARD
+GET http://localhost:7117/dashboard
+### TEST GET/API/
+GET http://localhost:7117/api/v1/users
+### TEST GET/ABOUT
+GET http://localhost:7117/about
+### TEST POST/API/
+POST http://localhost:7117/api/v1/users
+Content-Type: application/json
+
+{
+    "name": "Ajauuu",
+     "age":11
+}
+### TEST DELETE/API/
+DELETE http://localhost:7117/api/v1/users

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave Animation</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 50px;
+        }
+        .wave-container {
+            position: relative;
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            display: none;
+        }
+        .wave {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            left: 0;
+        }
+        .wave svg {
+            width: 100%;
+            height: 100%;
+            animation: wave-motion 3s linear infinite;
+        }
+        @keyframes wave-motion {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showWave()">Show Wave</button>
+    <div class="wave-container" id="wave-container">
+        <div class="wave">
+            <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
+                <path d="M0,50 C300,150 900,-50 1200,50 V100 H0 Z" fill="blue"/>
+            </svg>
+        </div>
+    </div>
+    <script>
+        function showWave() {
+            let waveContainer = document.getElementById('wave-container');
+            waveContainer.style.display = 'block';
+            setTimeout(() => {
+                waveContainer.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
