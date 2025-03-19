@@ -1,0 +1,5 @@
+note:.env is used to store important keys
+steps
+PS C:\Projects> cd NODEJSBASICS
+PS C:\Projects\NODEJSBASICS> cd chapter-2
+PS C:\Projects\NODEJSBASICS\chapter-2> npm install express bcryptjs jsonwebtoken
